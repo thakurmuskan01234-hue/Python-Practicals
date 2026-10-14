@@ -1,25 +1,18 @@
-# Practical 10: Fake News Detection from Multimodal Data
+# Practical 2: Clustering Using Unsupervised Learning
 
 ## Aim
-Design a model that combines textual and visual information for fake-news classification.
+Apply K-Means clustering to group observations without using class labels.
 
 ## Theory
-Multimodal learning combines information from more than one modality. Here:
-- Text is converted into TF-IDF features.
-- Each image is converted into simple visual features using a grayscale histogram and edge density.
-- The two feature sets are concatenated and classified using Logistic Regression.
-
-This is a compact, offline educational demonstration. The included data is a toy dataset created only so the practical runs immediately; it must not be presented as a real news dataset or as evidence about actual news stories.
+K-Means partitions observations into K clusters by minimizing within-cluster squared distances. The elbow method helps choose a reasonable K.
 
 ## Procedure
-1. Load the text/image/label CSV.
-2. Extract TF-IDF text features.
-3. Extract visual features from each image.
-4. Concatenate both feature matrices.
-5. Train a Logistic Regression classifier.
-6. Evaluate accuracy and display a confusion matrix.
+Load the Iris dataset, standardize features, calculate inertia for K values, choose K=3 for demonstration, fit K-Means, and visualize the clusters.
 
 ## Execution
 ```bash
-python practical_10.py
+python practical_02.py
 ```
+
+## Result
+The program prints the evaluation/result and saves generated figures in the `outputs` folder.
